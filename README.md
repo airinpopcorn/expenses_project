@@ -1,6 +1,17 @@
-# expenses_project
+# EXPENSES PROJECT
 
 A new Flutter project.
+An application to keep expenses up to date, with charts. This project is created to be deployed on android, ios and also works in web but is has been designed for mobile devices.
+
+This project has been created to practice my skills in flutter.
+
+## Set Up
+
+Run the following commands from your terminal:
+
+1. git clone https://github.com/airinpopcorn/expenses_project.git to clone this repository.
+
+2. flutter pub get in the project root directory to install all the required dependencies.
 
 ## Getting Started
 
