@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'models/transaction.dart';
 import './widgets/transaction_list.dart';
 import './widgets/new_transaction.dart';
@@ -10,10 +9,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Personal Expenses',
       theme: ThemeData(
-          textButtonTheme: TextButtonThemeData(
-              style: TextButton.styleFrom(foregroundColor: Colors.purple))),
+        primarySwatch: Colors.blueGrey,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blueGrey,
+          accentColor: Colors.amber,
+        ),
+        fontFamily: "Quicksand",
+        textTheme: ThemeData.light().textTheme.copyWith(
+                titleMedium: const TextStyle(
+              fontFamily: "OpenSans",
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            )),
+        appBarTheme: const AppBarTheme(
+            titleTextStyle: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        )),
+      ),
       home: MyHomePage(),
     );
   }
@@ -60,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter App'),
+        title: Text('Personal Expenses'),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -76,7 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: double.infinity,
               child: Card(
-                color: Colors.amber,
                 child: Container(width: double.infinity, child: Text("CHART!")),
                 elevation: 5,
               ),
